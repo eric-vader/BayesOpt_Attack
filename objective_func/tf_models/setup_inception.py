@@ -46,10 +46,12 @@ import random
 import tarfile
 import scipy.misc
 import re
-from tensorflow.contrib.keras.api.keras.preprocessing.image import ImageDataGenerator
+from tensorflow.keras.preprocessing.image import ImageDataGenerator
 import numpy as np
 from six.moves import urllib
 import tensorflow as tf
+from PIL import Image
+import imageio
 
 FLAGS = tf.app.flags.FLAGS
 
@@ -280,7 +282,8 @@ def main(_):
   # run_inference_on_image(image)
   create_graph()
   with tf.Session() as sess:
-    dat = np.array(scipy.misc.imresize(scipy.misc.imread(image),(299,299)), dtype = np.float32)
+    #dat = np.array(scipy.misc.imresize(scipy.misc.imread(image),(299,299)), dtype = np.float32)
+    dat = np.array(Image.fromarray(imageio.imread(image)).resize((299,299)), dtype = np.float32)
     dat /= 255.0
     dat -= 0.5
     # print(dat)

@@ -17,7 +17,7 @@
 ## See the License for the specific language governing permissions and
 ## limitations under the License.
 
-from tensorflow.contrib.keras.api.keras.models import Model, model_from_json, Sequential
+from tensorflow.keras.models import Model, model_from_json, Sequential
 from PIL import Image
 
 import tensorflow as tf
