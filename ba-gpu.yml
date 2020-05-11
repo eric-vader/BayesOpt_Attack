@@ -1,7 +1,6 @@
 name: ba
 channels:
   - conda-forge
-#  tensorflow-gpu
 dependencies:
   - python==3.6.8
   - pip==19.3.1
@@ -15,7 +14,7 @@ dependencies:
   - conda-forge::scipy==1.4.1
   - conda-forge::mlflow==1.8.0
   - conda-forge::gpy
-  - intel::tensorflow
+  - tensorflow-gpu
   - pytorch::pytorch==1.5.0
   - conda-forge::pillow
   - conda-forge::imageio
