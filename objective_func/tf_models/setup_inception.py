@@ -49,7 +49,7 @@ import re
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 import numpy as np
 from six.moves import urllib
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
 from PIL import Image
 import imageio
 
