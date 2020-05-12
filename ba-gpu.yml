@@ -14,10 +14,12 @@ dependencies:
   - conda-forge::scipy==1.4.1
   - conda-forge::mlflow==1.8.0
   - conda-forge::gpy
-  - tensorflow-gpu
-  - pytorch::pytorch==1.5.0
+  - nvidia::cudatoolkit
   - conda-forge::pillow
   - conda-forge::imageio
   - pip:
     - GPyOpt
     - pyDOE
+    - tensorflow==2.1.0
+    - torchvision
+    - torch
