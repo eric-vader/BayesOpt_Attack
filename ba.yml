@@ -10,7 +10,6 @@ dependencies:
   - h5py==2.10.0
   - numpy==1.18.1
   - scipy==1.4.1
-  - tensorflow==2.1.0
   - pillow
   - imageio
   - pytorch::pytorch
@@ -22,3 +21,4 @@ dependencies:
     - pyDOE
     - matplotlib==3.2
     - mlflow==1.8.0
+    - tensorflow==2.1.0
