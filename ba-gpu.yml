@@ -1,25 +1,26 @@
 name: ba
 channels:
-  - conda-forge
+  - defaults
 dependencies:
   - python==3.6.8
   - pip==19.3.1
-  - conda-forge::cython==0.29.17
-  - conda-forge::glib
-  - conda-forge::libblas=*=*mkl
-  - conda-forge::networkx
-  - conda-forge::matplotlib==3.2
-  - conda-forge::h5py==2.10.0
-  - conda-forge::numpy==1.18.4
-  - conda-forge::scipy==1.4.1
-  - conda-forge::mlflow==1.8.0
-  - conda-forge::gpy
+  - cython==0.29.17
+  - glib
+  - networkx
+  - h5py==2.10.0
+  - numpy==1.18.1
+  - scipy==1.4.1
+  - tensorflow==2.1.0
+  - pillow
+  - imageio
+  - pytorch::pytorch
+  - pytorch::torchvision
+  - pytorch::cpuonly
   - nvidia::cudatoolkit
-  - conda-forge::pillow
-  - conda-forge::imageio
+  - nvidia::cudnn
   - pip:
+    - gpy
     - GPyOpt
     - pyDOE
-    - tensorflow==2.1.0
-    - torchvision
-    - torch
+    - matplotlib==3.2
+    - mlflow==1.8.0
