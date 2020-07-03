@@ -2,9 +2,9 @@ name: ba
 channels:
   - defaults
 dependencies:
-  - python==3.8.2
+  - python==3.8.3
   - pip=20
-  - conda-forge::cython==0.29.17
+  - glib==2.63.1 # Some machines missing glib...
   - conda-forge::networkx==2.4
   - conda-forge::matplotlib==3.1.3
   - conda-forge::h5py==2.10.0
@@ -17,10 +17,11 @@ dependencies:
   - pytorch::pytorch
   - pytorch::torchvision
   - pytorch::cpuonly
-  - conda-forge::mlflow==1.8.0
+  - conda-forge::mlflow==1.9.1
   - conda-forge::pyDOE
   - conda-forge::GPyOpt
-#  - nvidia::cudatoolkit
+  - cudnn=7.6.5=cuda10.1_0
+  - cudatoolkit=10.1
+#  - nvidia::cudatoolkit=10.1
 #  - nvidia::cudnn
-  - pip:
-    - tensorflow==2.2.0
+
