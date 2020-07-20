@@ -26,7 +26,7 @@ Run BayesOpt Attack experiments: `python run_bayesopt_attack.py` followed by the
 * `-m`  BayesOpt attack method: `GP` for GP-BO, `ADDGPLD` for ADDGP-BO or `GPLDR` for GP-BO-auto-dr
 * `-ld`  Reduced dimension. `=196` for MNIST and CIFAR10, `=2304` for ImageNet. Not applicable when use GP-BO-auto-dr as it learns the reduced dimension automatically
 * `-rd`  Upsampling method. Default `=BILI` for bilinear resizing
-* `-nsub`  Number of subspaces from decomposing the image dimensions. Only applicable when use ADDGP-BO: `=14` for MNIST, `=12` for CIFAR10 or `=27` for ImageNet.
+* `-nsub`  Number of subspaces from decomposing the image dimensions. Only applicable when use ADDGP-BO: `=12` for MNIST, CIFAR10 or `=27` for ImageNet.
 
 Other arguments are described in `run_bayesopt_attack.py`.
 
@@ -34,6 +34,8 @@ Other arguments are described in `run_bayesopt_attack.py`.
   Case 1: GP-BO attack on trained MNIST classifier for 900 iterations with reduced dimension of 14x14x1. Attack 1 correctly classified image with ID=0 on the other 9 class labels: 
   ```
   python run_bayesopt_attack.py -f='mnist' -m='GP' -nitr=900 -rd='BILI' -ld=196 -i=0 -ntg=9
+  python run_bayesopt_attack.py -f='mnist' -m='GPLDR' -nitr=900 -i=0 -ntg=9
+  python run_bayesopt_attack.py -f='mnist' -m='ADDGPLD' -nitr=900 -rd='BILI' -ld=196 -nsub=12 -i=0 -ntg=9
   ```
  
   Case 2: GP-BO-auto-dr attack on trained CIFAR10 classifier for 900 iterations. Attack 1 correctly classified image with ID=0  on the other 9 class labels: 
